@@ -9,3 +9,12 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Folder Structure
 The component division and files/folders structure is created following [this proposal](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346)
+
+## Config
+
+You need a file named `.env` in the project rootpath with the following variables:
+
+```
+API_BASE_URL=xxxxxx
+UTILITY_ID=xxxxxx
+```

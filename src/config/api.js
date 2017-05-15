@@ -1,11 +1,10 @@
 import { create } from 'apisauce';
 import Reactotron from 'reactotron-react-js';
 
-const baseURL = 'http://wolox.com'; // TODO: properly set the base api url
-
 const api = create({
-  baseURL,
-  timeout: 5000
+  baseURL: process.env.API_BASE_URL,
+  headers: { 'Utility-ID': process.env.UTILITY_ID },
+  timeout: 15000
 });
 
 if (process.env.NODE_ENV === 'development') {
