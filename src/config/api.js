@@ -1,5 +1,5 @@
-// import Reactotron from 'reactotron-react-native'; // TODO: setup reactotron
 import { create } from 'apisauce';
+import Reactotron from 'reactotron-react-js';
 
 const baseURL = 'http://wolox.com'; // TODO: properly set the base api url
 
@@ -8,7 +8,9 @@ const api = create({
   timeout: 5000
 });
 
-// api.addMonitor(Reactotron.apisauce);
+if (process.env.NODE_ENV === 'development') {
+  api.addMonitor(Reactotron.apisauce);
+}
 
 export const apiSetup = dispatch => { // eslint-disable-line no-unused-vars, prettier/prettier
   api.addMonitor(response => {
