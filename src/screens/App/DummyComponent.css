@@ -1,5 +1,7 @@
 .dummy-component {
+  display: flex;
   flex: auto;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
