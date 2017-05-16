@@ -3,7 +3,7 @@ Utility
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-In [this file](docs/README.md) you will find usefull documentation about setting up, running and extending this project.
+In [this file](docs/README.md) you will find useful documentation about setting up, running and extending this project.
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 
