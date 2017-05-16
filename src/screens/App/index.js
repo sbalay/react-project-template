@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { apiSetup } from '../../config/api';
+
 import logo from '../../assets/logo.svg';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
+  componentDidMount() {
+    apiSetup(); // TODO: Use dispatch as argument
+  }
+
   render() {
     return (
       <div className="App">
@@ -22,5 +28,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
