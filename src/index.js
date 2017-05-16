@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import './config/reactotron';
+import './config/perf';
 
 import AppRoutes from './routes';
 import store from './redux/store';
