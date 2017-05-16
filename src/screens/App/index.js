@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import { apiSetup } from '../../config/api';
 
@@ -20,6 +21,9 @@ export default class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Link to="/dummy">
+          <button>Show dummy link</button>
+        </Link>
       </div>
     );
   }
