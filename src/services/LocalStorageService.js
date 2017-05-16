@@ -18,13 +18,13 @@ const removeValue = key => {
 };
 
 export function setSessionToken(sessionToken) {
-  return setValue('@@UTILITY:session_token', sessionToken);
+  return setValue('@@AUTH:session_token', sessionToken);
 }
 
 export function getSessionToken() {
-  return getValue('@@UTILITY:session_token');
+  return getValue('@@AUTH:session_token');
 }
 
 export function removeSessionToken() {
-  return removeValue('@@UTILITY:session_token');
+  return removeValue('@@AUTH:session_token');
 }

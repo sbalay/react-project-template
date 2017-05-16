@@ -2,7 +2,6 @@ import { create } from 'apisauce';
 
 const api = create({
   baseURL: process.env.REACT_APP_API_BASE_URL,
-  headers: { 'Utility-ID': process.env.REACT_APP_UTILITY_ID },
   timeout: 15000
 });
 

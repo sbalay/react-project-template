@@ -1,4 +1,4 @@
-Utility
+React kickoff template
 ==========================
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -16,7 +16,6 @@ You need a file named `.env` in the project rootpath with the following variable
 
 ```
 REACT_APP_API_BASE_URL=xxxxxx
-REACT_APP_UTILITY_ID=xxxxxx
 ```
 
 ## Styles
