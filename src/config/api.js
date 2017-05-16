@@ -2,8 +2,8 @@ import { create } from 'apisauce';
 import Reactotron from 'reactotron-react-js';
 
 const api = create({
-  baseURL: process.env.API_BASE_URL,
-  headers: { 'Utility-ID': process.env.UTILITY_ID },
+  baseURL: process.env.REACT_APP_API_BASE_URL,
+  headers: { 'Utility-ID': process.env.REACT_APP_UTILITY_ID },
   timeout: 15000
 });
 

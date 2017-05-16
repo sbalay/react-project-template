@@ -15,6 +15,6 @@ The component division and files/folders structure is created following [this pr
 You need a file named `.env` in the project rootpath with the following variables:
 
 ```
-API_BASE_URL=xxxxxx
-UTILITY_ID=xxxxxx
+REACT_APP_API_BASE_URL=xxxxxx
+REACT_APP_UTILITY_ID=xxxxxx
 ```
