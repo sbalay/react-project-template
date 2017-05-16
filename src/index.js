@@ -7,8 +7,6 @@ import './config/reactotron';
 import AppRoutes from './routes';
 import store from './redux/store';
 
-import './index.css';
-
 ReactDOM.render(
   <Provider store={store}>
     <AppRoutes />

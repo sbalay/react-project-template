@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { StyleRoot } from 'radium';
 
 import { apiSetup } from '../../config/api';
 import { actionCreators as authActions, propTypes as authPropTypes } from '../../redux/authHandlers';
+import styles from './App.styles';
 
 import logo from '../../assets/logo.svg';
-import './App.css';
 
 class App extends Component {
   componentDidMount() {
@@ -18,15 +19,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <StyleRoot style={styles.base}>
+        <div style={styles.header}>
+          <img src={logo} style={styles.logo} alt="logo" />
           <h2>Welcome to React {this.props.currentUser ? this.props.currentUser.email : 'Guest'}</h2>
         </div>
         <Link to="/dummy">
           <button>Show dummy route</button>
         </Link>
-      </div>
+      </StyleRoot>
     );
   }
 }

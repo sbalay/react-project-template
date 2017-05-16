@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 import { history } from './redux/store';
 
-import DummyComponent from './screens/DummyComponent/DummyComponent';
+import DummyComponent from './screens/DummyComponent';
 import App from './screens/App';
 
 function AppRoutes() {
