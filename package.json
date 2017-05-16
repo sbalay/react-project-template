@@ -13,9 +13,6 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "next",
-    "reactotron-apisauce": "^1.10.0",
-    "reactotron-react-js": "^1.10.0",
-    "reactotron-redux": "^1.10.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "seamless-immutable": "^7.1.2"

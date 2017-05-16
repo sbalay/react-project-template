@@ -1,15 +1,10 @@
 import { create } from 'apisauce';
-import Reactotron from 'reactotron-react-js';
 
 const api = create({
   baseURL: process.env.REACT_APP_API_BASE_URL,
   headers: { 'Utility-ID': process.env.REACT_APP_UTILITY_ID },
   timeout: 15000
 });
-
-if (process.env.NODE_ENV === 'development') {
-  api.addMonitor(Reactotron.apisauce);
-}
 
 export const apiSetup = dispatch => { // eslint-disable-line no-unused-vars, prettier/prettier
   api.addMonitor(response => {
