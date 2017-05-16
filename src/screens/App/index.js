@@ -5,7 +5,7 @@ import { StyleRoot } from 'radium';
 
 import { apiSetup } from '../../config/api';
 import { actionCreators as authActions, propTypes as authPropTypes } from '../../redux/authHandlers';
-import styles from './App.styles';
+import styles, { BaseStyles } from './App.styles';
 
 import logo from '../../assets/logo.svg';
 
@@ -20,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <StyleRoot style={styles.base}>
+        {BaseStyles}
         <div style={styles.header}>
           <img src={logo} style={styles.logo} alt="logo" />
           <h2>Welcome to React {this.props.currentUser ? this.props.currentUser.email : 'Guest'}</h2>

@@ -1,4 +1,5 @@
-import Radium from 'radium';
+import React from 'react';
+import Radium, { Style } from 'radium';
 
 const spinKeyframes = Radium.keyframes(
   {
@@ -24,3 +25,14 @@ export default {
     color: 'white'
   }
 };
+
+export const BaseStyles = (
+  <Style
+    rules={{
+      body: {
+        margin: 0,
+        fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif'
+      }
+    }}
+  />
+);
