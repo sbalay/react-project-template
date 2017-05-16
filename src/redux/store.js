@@ -2,7 +2,11 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import Reactotron from 'reactotron-react-js';
 import thunk from 'redux-thunk';
 
-const reducers = combineReducers({});
+import { reducer as auth } from './authHandlers';
+
+const reducers = combineReducers({
+  auth
+});
 
 const middlewares = [];
 const enhancers = [];
