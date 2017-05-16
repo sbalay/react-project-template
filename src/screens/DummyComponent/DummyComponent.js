@@ -6,7 +6,7 @@ import './DummyComponent.css';
 function DummyComponent() {
   return (
     <div className="dummy-component">
-      <Link to="/">Hide Me !</Link>
+      <Link to="/">Go back</Link>
     </div>
   );
 }

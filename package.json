@@ -11,6 +11,7 @@
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
     "reactotron-apisauce": "^1.10.0",
     "reactotron-react-js": "^1.10.0",
     "reactotron-redux": "^1.10.0",

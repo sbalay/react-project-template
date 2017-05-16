@@ -1,22 +1,20 @@
 import React from 'react';
-import { Router } from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
 import { Route } from 'react-router-dom';
 
-import createBrowserHistory from 'history/createBrowserHistory';
+import { history } from './redux/store';
 
 import DummyComponent from './screens/DummyComponent/DummyComponent';
 import App from './screens/App';
 
-const history = createBrowserHistory();
-
 function AppRoutes() {
   return (
-    <Router history={history}>
+    <ConnectedRouter history={history}>
       <div>
-        <Route path="/" component={App} />
+        <Route exact path="/" component={App} />
         <Route path="/dummy" component={DummyComponent} />
       </div>
-    </Router>
+    </ConnectedRouter>
   );
 }
 

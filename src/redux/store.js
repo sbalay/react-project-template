@@ -1,14 +1,19 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import Reactotron from 'reactotron-react-js';
 import thunk from 'redux-thunk';
+import { routerReducer as router, routerMiddleware } from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory';
 
 import { reducer as auth } from './authHandlers';
 
+export const history = createHistory();
+
 const reducers = combineReducers({
-  auth
+  auth,
+  router
 });
 
-const middlewares = [];
+const middlewares = [routerMiddleware(history)];
 const enhancers = [];
 
 /* ------------- Thunk Middleware ------------- */
