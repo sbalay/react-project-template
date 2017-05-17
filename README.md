@@ -8,6 +8,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 
 ## Folder Structure
+
 The component division and files/folders structure is created following [this proposal](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346)
 
 ## Config
@@ -23,3 +24,23 @@ REACT_APP_API_BASE_URL=xxxxxx
 We use scoped styles per component, powered by [Radium](https://github.com/FormidableLabs/radium) library.
 
 This makes us write inline styles using JS objects and 0% of css. This is an important decision that has a high impact in the project development and is mainly based on the pros and cons exposed in [this talk](https://speakerdeck.com/vjeux/react-css-in-js).
+
+## Performance debugging
+
+This project also supports performance debugging using [react-addons-perf](https://www.npmjs.com/package/react-addons-perf).  
+
+To use it, open a browser console within your project. Then,
+```
+// Start measurement
+Perf.start()
+
+// Do stuff in your project
+
+// Stop measurement
+Perf.stop()
+
+// Prints changes count on Virtual DOM that doesn't impact on render()
+Perf.printWasted()
+```
+
+It's recommended to check official reference [here](https://facebook.github.io/react/docs/perf.html).
