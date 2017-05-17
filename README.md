@@ -44,3 +44,11 @@ Perf.printWasted()
 ```
 
 It's recommended to check official reference [here](https://facebook.github.io/react/docs/perf.html).
+
+## Dev tools
+
+This project is already configured to take advantadge of the following tools:
+- [React Dev Tools](https://github.com/facebook/react-devtools)
+- [Redux Dev Tools](https://github.com/gaearon/redux-devtools)
+
+We strongly recommended installing the browser extensions and use them during development.
