@@ -2,13 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import './config/reactotron';
 import './config/perf';
 
-import AppRoutes from './routes';
+import AppRoutes from './config/routes';
 import store from './redux/store';
-
-import './index.css';
 
 ReactDOM.render(
   <Provider store={store}>

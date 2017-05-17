@@ -1,10 +1,18 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import Reactotron from 'reactotron-react-js';
 import thunk from 'redux-thunk';
+import { routerReducer as router, routerMiddleware } from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory';
 
-const reducers = combineReducers({});
+import { reducer as auth } from './authHandlers';
 
-const middlewares = [];
+export const history = createHistory();
+
+const reducers = combineReducers({
+  auth,
+  router
+});
+
+const middlewares = [routerMiddleware(history)];
 const enhancers = [];
 
 /* ------------- Thunk Middleware ------------- */
@@ -13,8 +21,8 @@ middlewares.push(thunk);
 /* ------------- Assemble Middleware ------------- */
 enhancers.push(applyMiddleware(...middlewares));
 
-// in dev mode, we'll create the store through Reactotron
-const createAppropriateStore = process.env.NODE_ENV === 'development' ? Reactotron.createStore : createStore;
-const store = createAppropriateStore(reducers, compose(...enhancers));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle
+
+const store = createStore(reducers, composeEnhancers(...enhancers));
 
 export default store;

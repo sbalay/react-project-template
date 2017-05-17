@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import './DummyComponent.css';
+import styles from './DummyComponent.styles';
 
 function DummyComponent() {
   return (
-    <div className="dummy-component">
-      <Link to="/">Hide Me !</Link>
-    </div>
+    <Link to="/">
+      <button style={styles.base}>Go back</button>
+    </Link>
   );
 }
 
