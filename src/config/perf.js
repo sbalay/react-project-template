@@ -1,3 +1,5 @@
 import Perf from 'react-addons-perf';
 
-window.Perf = Perf;
+if (process.env.NODE_ENV === 'development') {
+  window.Perf = Perf;
+}
